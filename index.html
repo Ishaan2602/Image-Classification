@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>CEI Image Classifier</title>
+	<link href="https://unpkg.com/wingcss" rel="stylesheet" type="text/css" />
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="main">
+		<div id="video">
+			<!-- Webcam stream is inserted here -->
+		</div>
+
+		<div id="data">
+			<!-- Use buttons to take pictures from webcam feed and add to training set-->
+			<button id="redButton">🔴 - <span id="setA">0</span> images</button>
+			<button id="blueButton">🔵 - <span id="setB">0</span> images</button>
+
+			<br>
+
+			<button id="train" class='outline'>Train Model</button>
+
+			<!-- The predict button is hidden until model is trained -->
+			<button id="predict" class='outline'>Predict 🔮</button>
+
+			<br>
+
+			<em id="message">Take at least 15 photos for both categories before training</em>
+
+		</div>
+	</div>
+
+	<!-- Import ml5.js, p5.js and p5.dom.js  -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+	<script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+	<script src="script.js"></script>
+
+</body>
+
+</html>
